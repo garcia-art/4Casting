@@ -1,0 +1,229 @@
+
+/* HEADER */
+@media (min-width:0px){
+  .header{
+  height: 70px;
+  background:#252323;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3em;
+  z-index: 1000;
+}
+
+.logo{
+  text-transform: uppercase;
+}
+
+.menu{
+  line-height: 50px;
+}
+.menu a{
+  color: #fff;
+  font-size: 2em;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.menu a:hover{
+  color: #8a2ce2;
+}
+
+}
+
+
+:root {
+  font-size: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  --primary-blue: #db1515;
+}
+
+body{
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-blue);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.small {font-size: 80%;
+text-align: center;}
+
+.split-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.right{
+  height: 200px;
+  background: linear-gradient(rgba(0,0,0,0),rgba (0, 0, 0, 0.5));
+  background:url('../../assets/images/loginA.jpeg');
+  background-size: cover;
+}
+
+.left, .right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right .copy{
+  color: #ffffff;
+  text-align: center;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: greyscale;
+  padding-bottom: 100px;
+
+}
+
+.right p{
+  font-weight: 400;
+}
+
+.left .copy {
+  color: #000;
+  text-align: center;
+}
+
+.left .copy p{
+  margin: 1.5em 0;
+  font-size: 0.875em;
+}
+
+.left form{
+  width: 328px;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #C4C4C4;
+  padding: 1em;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+label{
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.input-container.password{
+  position: relative;
+}
+
+.input-container.password i{
+  position: absolute;
+  top:42px;
+  right: 16px; 
+  /* precisa */
+}
+
+
+.checkbox-container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 0 1.25rem 0;
+}
+
+.checkbox-container input:checked~.checkmark{
+  background-color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+}
+
+.checkmark {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border: 1px solid #C4C4C4;
+  border-radius: 2px;
+  top: -4px;
+  left: 0;
+  /* precisa */
+}
+
+.checkmark:after{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.checkbox-container input:checked~.checkmark:after{
+  display: block;
+}
+
+.checkbox-container .checkmark:after{
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  width: 5px;
+  height: 10px;
+  left: 8px;
+  top: 4px;
+  transform: rotate(45deg);
+  /* precisa */
+}
+
+.signin-btn { 
+  display: block;
+  width: 100%;
+  background: var(--primary-blue);
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signin-btn:hover{
+  background: #ff0000;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px){
+  .split-screen {
+    flex-direction: row-reverse;
+    height: 100vh;
+  }
+  .left,
+  .right {
+    display: flex;
+    width: 50%;
+    height: auto;
+  }
+}
